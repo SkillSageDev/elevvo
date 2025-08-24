@@ -29,13 +29,15 @@ function collapseSidebar(){
     let logo = document.querySelector(".sidebar__logo");
     arrows.addEventListener("click", e => {
         if(arrows.firstElementChild.classList.contains("hidden")){
-            itemsText.forEach(text => text.toggleAttribute("hidden"))
+            itemsText.forEach(text => text.style.cssText = "opacity: 0;");
             logo.toggleAttribute("hidden")
             sidebar.style.width = "5rem"
+            logo.parentElement.style.justifyContent = "center";
         } else{
             logo.toggleAttribute("hidden")
             sidebar.style.width = "20rem"
-            itemsText.forEach(text => text.toggleAttribute("hidden"))
+            itemsText.forEach(text => text.style.cssText = "opacity: 1;");
+            logo.parentElement.style.justifyContent = "space-between";
             console.log("no hidden");
         };
     })
