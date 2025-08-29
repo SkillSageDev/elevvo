@@ -6,50 +6,38 @@
     <title>Collapsible SideBar</title>
     <!-- styles -->
     <link rel="stylesheet" href="./style.css">
-    <!-- icons (font awesome) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- scripts -->
     <script src="./main.js" defer></script>
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
    <div class="sidebar">
     <div class="sidebar__container">
         <div class="sidebar__logo-wrapper">
-
             <img class="sidebar__logo" src="./assets/logo.png" alt="logo">
-
-            <div class="sidebar__arrow-wrapper">
-
-                <img class="sidebar__arrow-left" src="./assets/arrow-left-solid-full.svg" alt="left-arrow">
-
-                <img class="sidebar__arrow-right hidden" src="./assets/arrow-right-solid-full.svg" alt="right-arrow">
-
-            </div>
-
+            <i class="sidebar__arrow nf nf-fa-angles_left"></i>
         </div>
 
         <ul class="sidebar__links">
-            <li class="sidebar__links-item">
-                <i class="sidebar__links-item-icon fa fa-dashboard"></i>
+            <li class="sidebar__links-item active">
+                <!-- <i class="sidebar__links-item-icon fa fa-dashboard"></i> -->
+                <i class="sidebar__links-item-icon nf nf-md-view_dashboard_outline"></i>
                 <span class="sidebar__links-item-text">Dashboard</span>
             </li>
             <li class="sidebar__links-item">
-                <i class="sidebar__links-item-icon fa fa-user"></i>
+                <!-- <i class="sidebar__links-item-icon fa fa-user"></i> -->
+                <i class="sidebar__links-item-icon nf nf-fa-user"></i>
                 <span class="sidebar__links-item-text">Profile</span>
             </li>
             <li class="sidebar__links-item">
-                <i class="sidebar__links-item-icon fa fa-cart-plus"></i>
+                <i class="sidebar__links-item-icon nf nf-fa-cart_shopping"></i>
                 <span class="sidebar__links-item-text">Cart</span>
             </li>
             <li class="sidebar__links-item">
-                <i class="sidebar__links-item-icon fa fa-question-circle"></i>
+                <i class="sidebar__links-item-icon nf nf-md-help_circle_outline"></i>
                 <span class="sidebar__links-item-text">Help</span>
             </li>
             <li class="sidebar__links-item">
-                <i class="sidebar__links-item-icon fa fa-gear"></i>
+                <i class="sidebar__links-item-icon nf  nf-fa-gear"></i>
                 <span class="sidebar__links-item-text">Settings</span>
             </li>
         </ul>

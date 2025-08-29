@@ -1,87 +1,116 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    
-}
-.sidebar{
-    position: fixed;
-    background-color: #eef2ff;
-    height: 100%;
-    width: 20rem;
-    border-radius: 1rem;
-    transition-property: width;
-    transition-duration: 100ms;
-    transition-timing-function: ease-out;
-    text-wrap: nowrap;
+/* nerd icons */
+@import "https://www.nerdfonts.com/assets/css/webfont.css";
+/* google fonts poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-.sidebar__container{
-    margin: 1rem;
+.sidebar {
+  position: fixed;
+  background-color: #eef2ff;
+  height: 100%;
+  width: 20rem;
+  border-radius: 1rem;
+  transition-property: width;
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
+  text-wrap: nowrap;
 }
 
-.sidebar__logo-wrapper{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 5rem;
+.sidebar__container {
+  margin: 1rem;
 }
 
-.sidebar__logo{
-    height: 5rem;
-    cursor: pointer;
+.sidebar__logo-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
 }
 
-.sidebar__arrow-wrapper{
-    height: 2rem;
-    right: 2rem;
-    cursor: pointer;
-    filter: invert(42%) sepia(0%) saturate(1352%) hue-rotate(210deg) brightness(100%) contrast(119%);
+.sidebar__logo {
+  height: 5rem;
+  cursor: pointer;
 }
 
-.sidebar__arrow-wrapper:hover{
-    filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(210deg) brightness(100%) contrast(119%);
+.sidebar__arrow {
+  display: inline-block;
+  transition: transform 300ms ease-in-out;
+  font-size: 1.3rem;
+  color: #9ca3af;
+  cursor: pointer;
 }
 
-.sidebar__arrow-right{
-    height: inherit;
+.sidebar__arrow:hover {
+  color: #537fe7;
 }
 
-.sidebar__arrow-left{
-    height: inherit;
+.sidebar__links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: max-content;
+  list-style: none;
+  margin-top: 2rem;
+  overflow: hidden;
 }
 
-.sidebar__links{
-    display: flex;
-    flex-direction: column; 
-    justify-content: space-between;
-    height: max-content;
-    list-style: none;
-    margin-top: 2rem;
-    overflow: hidden;
+.sidebar__links-item {
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
 }
 
-.sidebar__links-item{
-    padding: 1rem;
-    cursor: pointer;
-    border-radius: 0.5rem;
+.sidebar__links-item-icon {
+  pointer-events: none;
+  color: #9ca3af;
+  margin-right: 0.5rem;
 }
 
-.sidebar__links-item-icon{
-    color: #9ca3af;
-    margin-right: 0.5rem;
+.sidebar__links-item-text {
+  pointer-events: none;
+  transition-property: visibility;
+  transition-duration: 100ms;
+  transition-delay: 10ms;
+  transition-timing-function: ease-out;
 }
 
-.sidebar__links-item-text{
-    transition-property: visibility;
-    transition-duration: 100ms;
-    transition-delay: 10ms;
-    transition-timing-function: ease-out;
+.hidden {
+  display: none;
 }
 
-.hidden{
-   display: none; 
+.rotate {
+  transform: rotate(180deg);
+}
+
+.active {
+  position: relative;
+  background-color: #f5f7ff;
+}
+
+.active>.sidebar__links-item-icon {
+  color: #537fe7;
+}
+
+.active:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  background-color: #537fe7;
+  width: 0.2rem;
+  height: 3.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .sidebar {
+    width: 100%;
+  }
 }
