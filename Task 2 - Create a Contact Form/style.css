@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-style: normal;
+}
+
+.form__wrapper {
+  padding: 5rem;
+  background-color: #f9f9f9;
+  max-height: 100vh;
+}
+
+.form {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: 85vh;
+  width: 70vh;
+  gap: 1rem;
+  border-radius: 1rem;
+}
+
+.form__header {
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.form__input-wrapper {
+  position: relative;
+}
+
+.form__label {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 1rem;
+  transition: ease 100ms;
+  font-size: 0.9rem;
+  background-color: white;
+  color: oklch(44.6% 0.03 256.802);
+}
+
+.form__label--message {
+  top: 15%;
+}
+
+.form__input {
+  width: 20rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  border-style: none;
+  border: 0.1rem solid black;
+  outline: none;
+}
+
+.form__input--message {
+  width: 20rem;
+  height: 8rem;
+  border-radius: 0.5rem;
+  resize: none;
+  line-height: 1.2rem;
+  font-size: 0.9rem;
+}
+
+.form__submit {
+  width: 8rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  border-style: none;
+}
+
+@media only screen and (max-width: 500px) {
+  .form__wrapper {
+    background-color: white;
+  }
+
+  .form {
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+  }
+}

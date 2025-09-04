@@ -1,17 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Form</title>
-    <!-- styles -->
-    <link rel="stylesheet" href="./style.css">
-    <!-- scripts -->
-    <script src="./main.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title>
+  <!-- styles -->
+  <link rel="stylesheet" href="./style.css">
+  <!-- scripts -->
+  <script src="./main.js" defer></script>
 </head>
-<body>
-    <div class="container">
-    
-    </div>
+
+<body onload="document.form.reset();">
+  <div class="form__wrapper">
+    <form action="#" class="form" id="form" name="form">
+      <h3 class="form__header">Contact Us</h3>
+
+      <div class="form__input-wrapper">
+        <label class="form__label" for="username">Username</label>
+        <input class="form__input" type="text" name="username" id="username" value="" minlength="5" maxlength="25"
+          required>
+      </div>
+
+      <div class="form__input-wrapper">
+        <label class="form__label" for="email">Email</label>
+        <input class="form__input" type="email" name="email" id="email" value=""
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$" required>
+      </div>
+
+      <div class="form__input-wrapper">
+        <label class="form__label" for="subject">Subject</label>
+        <input class="form__input" type="subject" name="subject" id="subject" value="" minlength="8" maxlength="20"
+          required>
+      </div>
+
+      <div class="form__input-wrapper">
+        <label class="form__label form__label--message" for="message">Message</label>
+        <textarea class="form__input form__input--message" name="message" id="message" maxlength="120"
+          required></textarea>
+      </div>
+
+      <input class="form__submit" type="submit" name="submit" id="submit" value="Submit">
+    </form>
+  </div>
 </body>
+
 </html>
